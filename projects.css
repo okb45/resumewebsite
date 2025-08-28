@@ -1,0 +1,153 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Helvetica Neue",Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between; /* pushes logo left, links right */
+  align-items: center;
+  padding: 5px 30px;
+  position: fixed; /* keeps it at top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.2); /* keep over video */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  font-family: "Helvetica Neue", Arial, sans-serif; /* clean look */
+}
+
+/* Reset */
+ul, li { margin: 0; padding: 0; list-style: none; }
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Hidden dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* just below parent */
+  left: 0;
+  background: rgba(0,0,0,0.9); /* overlay look */
+  min-width: 200px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Dropdown item style */
+.dropdown-menu li a {
+  padding: 12px 16px;
+  color: #fff;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.navbar a:hover {
+  color: #ddd;
+}
+body {
+  padding-top: 70px; /* push content down so it's not behind navbar */
+}
+h4 {
+  text-align: center; /* centers the text */
+  font-size: 2rem;    /* increase size (default ~1rem = 16px) */
+  font-weight: 600;   /* makes it a bit bolder */
+  color: #333;
+}
+
+.project-layout {
+  display: flex;
+  align-items: flex-start;   /* keeps images aligned with text */
+  gap: 24px;                 /* spacing between images & text */
+  max-width: 1100px;
+  margin: 0 auto;        /* keeps it from being too wide */
+}
+
+.side-image img {
+  max-width: 250px;    /* control image size */
+  height: auto;
+  border-radius: 10px; /* optional: rounded corners */
+}
+
+.description {
+  flex: 1;             /* takes available space */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  color: #333;
+}
+.about-container {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.Memo {
+  flex: 1;
+  max-width: 700px;
+  text-align: justify;
+}
+
+
+.side-image {
+  flex-shrink: 0;
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 30px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .side-image {
+    width: 80%;
+  }
+}

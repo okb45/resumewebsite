@@ -4,20 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">Owen Bates</div>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+          <a>Projects ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="variable-rate-fertilizer.html">Variable Rate Fertilizer</a></li>
+            <li><a href="amiga-navigation.html">Amiga Navigation</a></li>
+            <li><a href="teensy-zybo-gba.html">Microcontroller-FPGA Gameboy</a></li>
+            <li><a href="cup-car-race.html">Cup-Car Race</a></li>
+            <li><a href="thorvald-control-system.html">Thorvald Control System / Swarm Robotics</a></li>
+          </ul>
+        </li>
+
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
+  <section class="variable-rate-fertilizer-content">
+    <h4 class="section-title">Variable Rate Fertilizer</h4>
 
-</body>
+    <div class="about-container">
+      <!-- Left Image -->
+      <img src="left-image.jpg" alt="Left Fertilizer Image" class="side-image">
+
+      <!-- Middle Text -->
+      <div class="Memo">
+        <p>
+          Variable-rate fertilizer application (VRA) improves nutrient efficiency and field uniformity,
+          yet commercial VRA spreaders commonly exceed <strong>$30,000</strong>, limiting adoption.
+          This project demonstrates a <strong>retrofit variable-rate controller</strong> for a pre-existing
+          fertilizer spreader, targeting low cost and ease of installation. The controller couples a
+          microcontroller with a linear or rotary actuator to modulate gate opening (or conveyor/feed rate)
+          in real time based on setpoints.
+        </p>
+
+        <p>
+          To provide feedback and mapping, the system integrates with <strong>myEV</strong>, a free web
+          application developed for the project. <strong>myEV</strong> acts as a data collector and visualization
+          tool, logging time-stamped operating data (GPS position, commanded fertilizer rate, actuator state)
+          and automatically producing a <em>field application map</em>. By pairing low-cost hardware with an
+          open-access digital platform, the system delivers the core value of VRA —
+          <strong>rate control, traceability, and decision support</strong> — without the premium price tag
+          of commercial equipment.
+        </p>
+      </div>
+
+      <!-- Right Image -->
+      <img src="right-image.jpg" alt="Right Fertilizer Image" class="side-image">
+    </div>
+  </section>
+
+
+  </body>
 </html>
