@@ -103,25 +103,8 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   z-index: -1;
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center block */
-  text-align: center;
-  color: white;
-  z-index: 1;
-}
 
-.highlight_text {
-  background-color: rgba(255, 255, 255, 0.7);
-  color: purple;
-  font-size: 50px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-bottom: 20px;
-}
+
 
 .bottom_content {
   padding: 50px 20px;        /* Space inside the section */
