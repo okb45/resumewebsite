@@ -87,7 +87,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   color: #ddd;
 }
 body {
-  padding-top: 70px; /* push content down so it's not behind navbar */
+  padding: 70px; /* push content down so it's not behind navbar */
 }
 h4 {
   text-align: center; /* centers the text */
@@ -132,6 +132,7 @@ h4 {
   line-height: 1.6;
   color: #444;
   text-align: justify;
+  padding: 0px 60px;    
 }
 
 
@@ -142,6 +143,13 @@ h4 {
   border-radius: 12px;
   object-fit: cover;
   margin: 0 30px;
+}
+.video-section {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {

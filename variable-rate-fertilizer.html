@@ -75,22 +75,17 @@
       <!-- Middle Text -->
       <div class="Memo">
         <p>
-          Variable-rate fertilizer application (VRA) improves nutrient efficiency and field uniformity,
-          yet commercial VRA spreaders commonly exceed <strong>$30,000</strong>, limiting adoption.
-          This project demonstrates a <strong>retrofit variable-rate controller</strong> for a pre-existing
-          fertilizer spreader, targeting low cost and ease of installation. The controller couples a
-          microcontroller with a linear or rotary actuator to modulate gate opening (or conveyor/feed rate)
-          in real time based on setpoints.
+          We retrofitted <strong>Vicon fertilizer spreader</strong> with a linear actuator to adjust the
+          gate opening in real time. A <strong>Raspberry Pi</strong> runs the control loop and communicates
+          with the actuator via a motor driver. A compact <strong>ADC</strong> measures actuator position
+          feedback, while an <strong>RTK GPS</strong> provides centimeter-level positioning.
         </p>
 
         <p>
-          To provide feedback and mapping, the system integrates with <strong>myEV</strong>, a free web
-          application developed for the project. <strong>myEV</strong> acts as a data collector and visualization
-          tool, logging time-stamped operating data (GPS position, commanded fertilizer rate, actuator state)
-          and automatically producing a <em>field application map</em>. By pairing low-cost hardware with an
-          open-access digital platform, the system delivers the core value of VRA —
-          <strong>rate control, traceability, and decision support</strong> — without the premium price tag
-          of commercial equipment.
+          We validated the system in a vineyard block using a <strong>urea-based fertilizer</strong>.
+          The Raspberry Pi loaded a vineyard <strong>shapefile</strong> with per-polygon target rates.
+          As the tractor traversed the rows, the controller adjusted the gate opening to match the
+          desired application rate for each block.
         </p>
       </div>
 
@@ -99,6 +94,62 @@
       
     </div>
   </section>
+
+  
+
+  <section class="video-section">
+    <video width="640" height="360" controls>
+      <source src="vrpro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+  </section>
+
+    <section class="variable-rate-fertilizer-bottom-content">
+      <h4 class="section-title">Easy to use UI interfacing with myEV</h4>
+
+      <div class="about-container">
+        <!-- Left Image -->
+
+        <!-- Middle Text -->
+        <div class="Memo">
+          <p>
+            To complement the hardware system, a <strong>PyQt-based application</strong> was developed
+            to serve as the operator interface on a rugged touch screen monitor. The app allows users to <em>configure system parameters</em>,
+            <em>calibrate actuator positions</em>, and <em>initiate fertilizer application</em> runs with a
+            simple, modern GUI. It also provided real-time status feedback from the Raspberry Pi, improving
+            usability and reducing setup time in the field.
+          </p>
+
+          <p>
+            Additionally, a <strong>custom PCB design</strong> was created to consolidate the wiring and signal
+            routing between the Raspberry Pi, ADC, and actuator. The PCB replaced the
+            temporary breadboard wiring used during early prototyping, resulting in a more robust and reliable
+            system suitable for extended field trials. This design step moved the project closer to a practical
+            retrofit solution that could be reproduced or scaled.
+          </p>
+        </div>
+
+        
+
+        
+      </div>
+    </section>
+    <section class="video-section">
+    <video width="640" height="360" controls>
+      <source src="gopro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <section class="video-section">
+    <video width="640" height="360" controls>
+      <source src="screenrecord.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <section class="photo-section">
+      <img src="left-image.jpg" alt="Left Fertilizer Image" class="side-image">
+    </video>
+
+
 
 
   </body>
