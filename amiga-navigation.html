@@ -4,20 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">Owen Bates</div>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+          <a>Projects ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="variable-rate-fertilizer.html">Variable Rate Fertilizer</a></li>
+            <li><a href="amiga-navigation.html">Amiga Navigation</a></li>
+            <li><a href="teensy-zybo-gba.html">Microcontroller-FPGA Gameboy</a></li>
+            <li><a href="cup-car-race.html">Cup-Car Race</a></li>
+            <li><a href="thorvald-control-system.html">Thorvald Control System / Swarm Robotics</a></li>
+          </ul>
+        </li>
+
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
+  <section class="variable-rate-fertilizer-content">
+    
 
-</body>
+    <div class="about-container">
+      <img src="amiga.JPG" alt="Left Fertilizer Image" class="side-image">
+      <!-- Left Image -->
+
+      <!-- Middle Text -->
+      <div class="Memo">
+        <h4 class="section-title">Amiga Navigation</h4>
+
+        <p>
+          This project began with the deployment of an Amiga robot equipped with Farm-ng navigation brains. I developed a program that generated custom track information from recorded waypoints, enabling the robot to autonomously follow precise paths. Using this system, the robot was driven across a field to create a grid of lines running north–south and east–west. At each intersection, posts were installed, which together laid out the framework for a new four-acre vineyard.
+        </p>
+
+        <p>
+          Following the vineyard-plotting phase, the navigation system evolved into a pure pursuit controller running on an NVIDIA Jetson Xavier. While the new electrical system for this platform was designed externally, I was responsible for its assembly and integration, as well as designing and 3D printing a custom mounting system for the Jetson-based navigation hardware.
+        </p>
+        <p>
+          The broader goal of this work was to transform the robot into a versatile agricultural research tool carrier. Potential applications include mounting NDVI sensors for crop health monitoring, integrating sucker-sprayer mechanisms, assisting in vineyard establishment, or performing tasks such as mowing and under-vine maintenance. This adaptability highlights the robot’s potential to serve as a scalable and flexible platform for future agricultural innovations.
+        </p>
+      
+      
+    </div>
+    <img src="vineyard2.jpg" alt="Left Fertilizer Image" class="side-image">
+
+  </section>
+
+
+
+  </body>
 </html>

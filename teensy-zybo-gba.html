@@ -4,20 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My First Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
 </head>
 <body>
   <header class="navbar">
     <div class="logo">Owen Bates</div>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+
+        <!-- Dropdown -->
+        <li class="dropdown">
+          <a>Projects ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="variable-rate-fertilizer.html">Variable Rate Fertilizer</a></li>
+            <li><a href="amiga-navigation.html">Amiga Navigation</a></li>
+            <li><a href="teensy-zybo-gba.html">Microcontroller-FPGA Gameboy</a></li>
+            <li><a href="cup-car-race.html">Cup-Car Race</a></li>
+            <li><a href="thorvald-control-system.html">Thorvald Control System / Swarm Robotics</a></li>
+          </ul>
+        </li>
+
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
+  <section class="variable-rate-fertilizer-content">
+    
 
-</body>
+    <div class="about-container">
+      <img src="gba2.jpg" alt="Left Fertilizer Image" class="side-image">
+      <!-- Left Image -->
+
+      <!-- Middle Text -->
+      <div class="Memo">
+        <h4 class="section-title">Teensy-Zybo-Game Boy Advanced</h4>
+        <p>
+          This project explores the design of a hybrid <strong>Game Boy Advance (GBA) emulator</strong> 
+          using both a <em>Teensy 4.1 microcontroller</em> and a <em>Zybo FPGA board</em> for 
+          hardware-accelerated graphics output to an <strong>ILI9486 16-bit parallel LCD</strong>. 
+          The approach separates emulation into two major components: CPU emulation and graphics rendering.
+        </p>
+
+        <p>
+          To simplify development and debugging, the emulator was first built and tested on a regular 
+          computer. This stage focused on correctness and allowed for step-by-step validation of 
+          <em>ARM7TDMI instruction decoding, CPU pipeline behavior, and memory-mapped I/O</em> without 
+          being constrained by embedded hardware. The emulator was structured so that the CPU emulation 
+          core could be compiled for both desktop and embedded targets.
+        </p>
+
+        <p>
+          The next stage of the project will involve <strong>porting the CPU emulation core to the 
+          Teensy microcontroller</strong>, where it will execute the game logic and memory operations. 
+          In parallel, the <strong>Zybo FPGA will be developed as a graphics accelerator</strong>, 
+          responsible for rendering tile and sprite data and driving the ILI9486 display over a 
+          16-bit parallel interface. This division of labor is expected to balance the sequential 
+          strengths of the microcontroller with the parallel processing power of the FPGA, providing 
+          a pathway toward real-time GBA emulation on embedded hardware.
+        </p>
+      </div>
+      <img src="teensy.JPG" alt="Left Fertilizer Image" class="side-image">
+
+      <!-- Right Image -->
+
+      
+    </div>
+    <h4 class="section-title">Project in Progress....</h4>
+  <section class="photo-section">
+    
+    <img src="catgif.gif" alt="Left Fertilizer Image" class="side-image">
+  <section>
+
+  </section>
+
+
+
+  </body>
 </html>

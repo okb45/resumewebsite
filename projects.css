@@ -87,13 +87,15 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   color: #ddd;
 }
 body {
-  padding: 70px; /* push content down so it's not behind navbar */
+  padding-top: 60px; /* push content down so it's not behind navbar */
+ /* push content down so it's not behind navbar */
 }
 h4 {
   text-align: center; /* centers the text */
   font-size: 2rem;    /* increase size (default ~1rem = 16px) */
   font-weight: 600;   /* makes it a bit bolder */
   color: #333;
+  margin-bottom: 0;
 }
 
 .project-layout {
@@ -113,17 +115,31 @@ h4 {
 .description {
   flex: 1;             /* takes available space */
   background-color: #f4f4f4;
-  padding: 20px;
   border-radius: 10px;
   color: #333;
 }
-.about-container {
-  
+.variable-rate-fertilizer-content {       /* Space inside the section */
+  text-align: left;           
+  margin: 0 auto;             /* Center the section horizontally */
+}
+.about {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 20px;
+  align-items: flex-start;   /* keeps images aligned with text */
+  gap: 24px;                 /* spacing between images & text */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;    /* stack pictures vertically */
+  gap: 20px;
+}
+
+.about-images img {
+  width: 200px;              /* consistent sizing */
+  border-radius: 12px;       /* soft corners */
+  object-fit: cover;
 }
 
 .Memo {
@@ -131,10 +147,46 @@ h4 {
   font-size: 18px;
   line-height: 1.6;
   color: #444;
-  text-align: justify;
-  padding: 0px 60px;    
 }
 
+.Memo p {
+  margin-bottom: 16px;    /* space between paragraphs */
+}
+.Memo1 {
+  flex: 1;                   /* text takes remaining space */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;   /* space between paragraphs */
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.Memo2 {
+  flex: 1;                   /* text takes remaining space */
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;   /* space between paragraphs */
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 70px;
+}
+
+.Memo strong {
+  color: #111;            /* darker emphasis */
+  font-weight: 600;       /* semi-bold, not heavy */
+}
+.about-container {
+  display: flex;
+  align-items: center;      /* centers text vertically with the tallest image */
+  justify-content: center;  /* centers whole row */
+  gap: 40px;                /* spacing between items */
+  margin-top: 20px;         /* space between title and flex row */
+}
+
+.about-container .Memo {
+  flex: 1;                  /* lets the text expand */
+  max-width: 700px;         /* don’t let it get too wide */
+  text-align: justify;
+}
 
 .side-image {
   flex-shrink: 0;
@@ -142,14 +194,46 @@ h4 {
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  margin: 0 30px;
+  margin: 0 30px;  /* adds space between image and text */
+}
+.side-image {
+  flex-shrink: 0;
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 0 30px;  /* adds space between image and text */
 }
 .video-section {
-  max-width: 800px;
-  margin: 50px auto;
-  text-align: center;
-  background: #f4f4f4;
+  display: flex;             /* arrange children side by side */
+  justify-content: center;   /* center them horizontally */
+  gap: 20px;                 /* space between videos */
+  flex-wrap: wrap;           /* if screen is too small, stack them */
+  margin: 40px auto;
+  max-width: 1400px;         /* keeps them from stretching edge-to-edge */
+}
+.photo-section {
+  display: flex;             /* arrange children side by side */
+  justify-content: center;   /* center them horizontally */
+  gap: 20px;                 /* space between videos */
+  flex-wrap: wrap;           /* if screen is too small, stack them */
+  margin: 40px auto;
+  max-width: 1400px;         /* keeps them from stretching edge-to-edge */
+}
+.photo-section img {
+  max-width: 200px;   /* shrink each item */
+  width: 100%;        /* make it scale responsively */
+  height: auto;       /* keep aspect ratio */
+  border-radius: 8px; /* optional: rounded corners */
+}
+.video-section video {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
+}
+.side-image {
+  max-width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
@@ -158,6 +242,6 @@ h4 {
   }
 
   .side-image {
-    width: 80%;
+    width: 80%;   /* images take most of the screen width */
   }
 }
