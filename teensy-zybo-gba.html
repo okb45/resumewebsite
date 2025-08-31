@@ -69,15 +69,45 @@
 
       <!-- Right Image -->
 
+
       
     </div>
-    <h4 class="section-title">Project in Progress....</h4>
-  <section class="photo-section">
-    
-    <img src="catgif.gif" alt="Left Fertilizer Image" class="side-image">
+
+
+  </section>
+      <div class="Memo1">
+        <h4 class="section-title">ARM7TDMI CPU Emulation</h4>
+        <p>
+          A major focus of the project was the design of the <strong>CPU emulation core</strong>, which 
+          was first implemented on a desktop computer to simplify testing and debugging. The goal was to 
+          create an emulator that could later be recompiled for the <em>Teensy 4.1 microcontroller</em> 
+          with minimal modification. To achieve this, the CPU core was written in a portable, hardware-agnostic 
+          style, with clean interfaces separating the processor logic from platform-specific peripherals.
+        </p>
+
+        <p>
+          The emulation process followed the <strong>fetch–decode–execute pipeline</strong>, mirroring 
+          the behavior of the <em>ARM7TDMI</em> processor used in the Game Boy Advance. This involved 
+          fetching instructions from emulated memory, decoding opcodes according to the ARM instruction 
+          manual, and executing the corresponding operations. Both <em>ARM (32-bit)</em> and 
+          <em>Thumb (16-bit)</em> instruction sets were supported, requiring careful implementation 
+          of condition codes, and mode switching between the two instruction sets.
+        </p>
+
+        
+        <p>
+          This staged approach made it possible to validate the CPU core extensively on desktop hardware 
+          before porting it to the microcontroller. By separating the core logic from hardware-specific 
+          code, the emulator could run in a desktop debugger while remaining compatible with the eventual 
+          embedded target.
+        </p>
   <section>
 
   </section>
+  <h4 class="section-title">Project in Progress....</h4>
+  <section class="photo-section">    
+    <img src="catgif.gif" alt="Left Fertilizer Image" class="side-image">
+  <section>
 
 
 

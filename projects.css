@@ -226,6 +226,12 @@ h4 {
   height: auto;       /* keep aspect ratio */
   border-radius: 8px; /* optional: rounded corners */
 }
+.photo-section1 img {  /* shrink each item */
+  width: 100%;        /* make it scale responsively */
+  height: auto;       /* keep aspect ratio */
+  border-radius: 50px; /* optional: rounded corners */
+  text-align:center;
+}
 .video-section video {
   max-width: 100%;
   height: auto;
