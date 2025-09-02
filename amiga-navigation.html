@@ -66,14 +66,11 @@
         <h4 class="section-title">Plotting of a new vineyard!</h4>
 
         <p>
-          This project began with the deployment of an Amiga robot equipped with Farm-ng navigation brains. I developed a program that generated custom track information from recorded waypoints, enabling the robot to autonomously follow precise paths. Using this system, the robot was driven across a field to create a grid of lines running north–south and east–west. At each intersection, posts were installed, which together laid out the framework for a new four-acre vineyard.
+          A key milestone in this project was the creation of a custom waypoint mapping program for the Amiga navigation system. The default Farm-ng “brains” required the robot to physically drive the paths in order to generate waypoint maps, which proved inefficient for large plantings—especially in vineyards where manually walking and recording every row can be time-consuming and impractical. To address this, I developed software that allowed GPS waypoints to be imported directly, generating custom pose and path maps without requiring physical traversal.
         </p>
 
         <p>
-          Following the vineyard-plotting phase, the navigation system evolved into a pure pursuit controller running on an NVIDIA Jetson Xavier. While the new electrical system for this platform was designed externally, I was responsible for its assembly and integration, as well as designing and 3D printing a custom mounting system for the Jetson-based navigation hardware.
-        </p>
-        <p>
-          The broader goal of this work was to transform the robot into a versatile agricultural research tool carrier. Potential applications include mounting NDVI sensors for crop health monitoring, integrating sucker-sprayer mechanisms, assisting in vineyard establishment, or performing tasks such as mowing and under-vine maintenance. This adaptability highlights the robot’s potential to serve as a scalable and flexible platform for future agricultural innovations.
+          Using this new mapping approach,  a complete four-acre vineyard planting path was designed for a plot of a new vineyard. The robot was equipped with a metal hook attachment that scored lines in the soil as it followed the programmed paths, running north–south and east–west across the block. The intersections of these lines defined the vineyard grid, providing precise markers where posts could be installed. This method enabled the vineyard team to quickly and accurately establish row and vine spacing, greatly streamlining the planting process.
         </p>
       
       
@@ -85,10 +82,35 @@
 
 
 
-  </section>
+    </section>
       <section class="photo-section1">
       <img src="editamiga.JPG" alt="amigaedit">
     </section>
+
+
+
+  </section>
+  <section class="variable-rate-fertilizer-content">
+    
+      <!-- Left Image -->
+
+      <!-- Middle Text -->
+      <div class="Memo1">
+        <h4 class="section-title">Update of Navigation</h4>
+
+      <p>
+        To support future research goals, the navigation system was redesigned to provide full control and flexibility. Our lab’s objective is to build a swarm robotics framework for agricultural applications, which required migrating away from proprietary systems and into a ROS 2–based architecture. This new platform enabled seamless integration with additional robots, sensors, and research tools while maintaining compatibility with standard robotics software stacks.
+      </p>
+
+      <p>
+        As part of this effort, a pure pursuit navigation controller was implemented on the NVIDIA Jetson Xavier. This approach allowed the robot to follow imported GPS waypoints with smooth, precise tracking, while also laying the foundation for multi-robot coordination in vineyard and field environments. The ROS 2 framework ensures that future expansions—such as cooperative task planning, distributed sensing, or multi-vehicle path sharing—can be developed on a scalable and modular system.
+      </p>
+      
+    <section class="video-section">
+    <video width="640" height="360" controls>
+      <source src="IMG_2681.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
 
 
 
