@@ -316,6 +316,13 @@ ul, li { margin: 0; padding: 0; list-style: none; }
     min-height: 44px;
     z-index: 6;
   }
+
+  .slide-overlay .prev{
+    left:8px;
+  }
+  .slide-overlay .next{
+    right: 8px;
+  }
 }
 
 @media (max-width: 480px) {
