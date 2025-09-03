@@ -219,12 +219,10 @@ h4 {
   max-width: 1400px;         /* keeps them from stretching edge-to-edge */
 }
 .video-section {
-  display: flex;             /* arrange children side by side */
-  justify-content: center;   /* center them horizontally */
-  gap: 20px;                 /* space between videos */
-  flex-wrap: wrap;           /* if screen is too small, stack them */
-  margin: 40px auto;
-  max-width: 1400px;         /* keeps them from stretching edge-to-edge */
+  position: relative;
+  max-width: 700px;    /* optional: keeps video from being too wide */
+  margin: 20px auto;   /* center it with spacing */
+  padding: 0 15px;     /* mobile-safe padding */
 }
 .photo-section {
   display: flex;             /* arrange children side by side */
@@ -255,10 +253,13 @@ h4 {
   text-align:center;
 }
 
+.video-section iframe,
 .video-section video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  width: 100%;         /* fill parent container */
+  height: auto;        /* auto height for video tags */
+  aspect-ratio: 16 / 9;/* keeps correct proportions */
+  border-radius: 12px; /* optional rounded corners */
+  border: none;
 }
 .side-image {
   max-width: 100%;
