@@ -152,6 +152,12 @@ h4 {
 .Memo p {
   margin-bottom: 16px;    /* space between paragraphs */
 }
+@media (max-width: 600px) {
+  .Memo {
+    font-size: 16px;  /* slightly smaller font for readability */
+    padding: 0 15px;  /* less padding on tiny screens */
+  }
+}
 .Memo1 {
   flex: 1;                   /* text takes remaining space */
   font-size: 18px;

@@ -272,6 +272,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   justify-content: space-between; /* push buttons to edges */
   align-items: center;
   padding: 0 10px;
+  z-index: 5;
 }
 
 /* Allow buttons to be clickable inside overlay */
@@ -285,6 +286,9 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   cursor: pointer;
   transition: 0.3s ease, transform 0.3s ease;
   transform: scale(1.3);
+  z-index: 6;
+  background-color: rgba(0,0,0,0);
+  border-radius: 5px;
   
 }
 
@@ -308,6 +312,9 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   .slide-overlay .next {
     font-size: 1.2rem;
     transform: scale(1);
+    min-width: 44px;
+    min-height: 44px;
+    z-index: 6;
   }
 }
 
