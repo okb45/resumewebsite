@@ -212,7 +212,23 @@ h4 {
   margin: 40px auto;
   max-width: 1400px;         /* keeps them from stretching edge-to-edge */
 }
+.video-section {
+  display: flex;             /* arrange children side by side */
+  justify-content: center;   /* center them horizontally */
+  gap: 20px;                 /* space between videos */
+  flex-wrap: wrap;           /* if screen is too small, stack them */
+  margin: 40px auto;
+  max-width: 1400px;         /* keeps them from stretching edge-to-edge */
+}
 .photo-section {
+  display: flex;             /* arrange children side by side */
+  justify-content: center;   /* center them horizontally */
+  gap: 20px;                 /* space between videos */
+  flex-wrap: wrap;           /* if screen is too small, stack them */
+  margin: 40px auto;
+  max-width: 1400px;         /* keeps them from stretching edge-to-edge */
+}
+.photo-section2 {
   display: flex;             /* arrange children side by side */
   justify-content: center;   /* center them horizontally */
   gap: 20px;                 /* space between videos */
@@ -232,6 +248,7 @@ h4 {
   border-radius: 50px; /* optional: rounded corners */
   text-align:center;
 }
+
 .video-section video {
   max-width: 100%;
   height: auto;
@@ -240,6 +257,13 @@ h4 {
 .side-image {
   max-width: 100%;
   height: auto;
+  
+}
+.gif-image {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 60px;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {
