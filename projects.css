@@ -291,3 +291,26 @@ h4 {
     padding: 8px 10px; /* less horizontal space */
   }
 }
+
+@media (max-width: 768px) {
+  .video-section {
+    max-width: 100%;   /* take full width */
+    padding: 0 10px;   /* reduce side padding */
+  }
+
+  .video-section iframe,
+  .video-section video {
+    border-radius: 8px; /* slightly smaller rounding */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section {
+    padding: 0 5px;   /* tighter padding on very small screens */
+  }
+
+  .video-section iframe,
+  .video-section video {
+    border-radius: 6px;
+  }
+}
