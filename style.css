@@ -192,10 +192,11 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 .Sliding_section {
   position: relative;
-  width: 1000px;
-  height: 400px;
+  width: 100%;              /* take full width of screen */
+  max-width: 1000px;        /* but don’t exceed desktop size */
+  aspect-ratio: 5 / 2;      /* keeps height proportional */
   margin: 0 auto;
-  perspective: 1000px; /* 3D perspective */
+  perspective: 1000px;
   overflow: visible;
 }
 
@@ -203,13 +204,15 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   position: absolute;
   top: 0;
   left: 50%;
-  width: 300px;
+  width: 80%;              /* smaller on mobile */
+  max-width: 300px;
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.5s ease, opacity 0.5s ease;
   opacity: 0;
   transform: translateX(-50%) scale(0.7) rotateY(30deg);
 }
+
 
 .slide.active {
   transform: translateX(-50%) scale(1) rotateY(0deg);
@@ -235,6 +238,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   object-fit: cover;
   border-radius: 10px;
 }
+
 
 .slide-button {
   position: absolute;
@@ -288,4 +292,35 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 .slide-overlay .next:hover {
   transform: scale(2.5); /* makes the button bigger on hover */
 }
+
+@media (max-width: 768px) {
+  .slide {
+    width: 90%;
+    max-width: 250px;
+  }
+
+  .slide-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .slide-overlay .prev,
+  .slide-overlay .next {
+    font-size: 1.2rem;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    width: 95%;
+    max-width: 200px;
+  }
+
+  .slide-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
 
