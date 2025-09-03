@@ -115,13 +115,12 @@ main {
   display: flex;
   justify-content: center;
   margin: 20px;
-  flex-wrap: wrap;
 }
 
 iframe {
   width: 100%;          /* take full width of parent */
   max-width: 900px;     /* optional: cap it for desktops */
-  height: 100vh;        /* full viewport height */
+  height: 150vh;        /* full viewport height */
   border: 1px solid #ccc;
   border-radius: 8px;
 }
