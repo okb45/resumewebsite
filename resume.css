@@ -131,3 +131,12 @@ iframe {
     height: 80vh;     /* slightly smaller height on mobile */
   }
 }
+@media (max-width: 600px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .navbar a {
+    padding: 8px 10px; /* less horizontal space */
+  }
+}

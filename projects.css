@@ -281,3 +281,12 @@ h4 {
     width: 80%;   /* images take most of the screen width */
   }
 }
+@media (max-width: 600px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .navbar a {
+    padding: 8px 10px; /* less horizontal space */
+  }
+}
